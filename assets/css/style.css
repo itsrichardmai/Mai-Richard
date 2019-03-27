@@ -12,6 +12,7 @@
 body {
     text-align: center;
     font-family: sans-serif;
+    background-color: #161617
 }
 .hero {
     /* Sizing */
@@ -22,17 +23,18 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     /* Text styles */
     text-align: center;
     
     /* Background styles */
-    background-image: url(https://codetheweb.blog/assets/img/posts/full-image-hero/image.jpg);
-    background-size: 100%;
+    background-image: url(https://1.bp.blogspot.com/-MfGbLzfDvQY/USplPeX91QI/AAAAAAAAsNk/jdLV-28DLzE/s1600/PhiladelphiaDBversionBW+6.jpg);
+    background-size: 100;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    filter: brightness(70%)
+    filter: brightness(100%);
+    margin: 10px;
 }
 
 .hero h1 {
@@ -72,4 +74,9 @@ body {
     text-align: center;
     font-weight: bold;
     text-decoration: underline;
+    color: black;
+}
+
+.footer {
+    background-color: grey;
 }
