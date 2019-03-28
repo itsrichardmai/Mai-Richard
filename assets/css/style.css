@@ -44,7 +44,7 @@ body {
 .header-text{
     color: white;
     filter: brightness(100%);
-
+    font-size: 28px;
 }
 .header-text:hover {
     color: white;
