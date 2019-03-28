@@ -33,8 +33,8 @@ body {
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    filter: brightness(100%);
-    margin: 10px;
+    filter: brightness(50%);
+    
 }
 
 .hero h1 {
@@ -49,7 +49,6 @@ body {
     color: white;
 }
 .header-text:hover {
-    filter: brightness(100%);
     color: white;
 }
 .footer--minimal {
