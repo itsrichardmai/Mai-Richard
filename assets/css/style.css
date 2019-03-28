@@ -83,7 +83,7 @@ body {
 }
 
 .dimthelights {
-    filter: brightness(70%)
+    filter: brightness(60%)
 }
 
 .carousel-caption{
@@ -93,3 +93,4 @@ body {
     color: white;
     filter: brightness(70%);
 }
+
