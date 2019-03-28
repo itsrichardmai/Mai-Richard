@@ -44,7 +44,11 @@ body {
    margin-top: 0;
    margin-bottom: 0; 
 }
-
+#whoisrichardMai {
+    font-size: 72px;
+    text-decoration: underline;
+    font-weight: bold;
+}
 .header-text{
     color: white;
 }
@@ -67,7 +71,9 @@ body {
     font-style: "UTF-8";
 }
 
-
+.carousel-item img{
+    width: 100%;
+}
 
 .footer__details {
     text-align: center;
