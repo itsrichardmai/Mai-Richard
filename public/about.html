@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>About Me</title>
+  
+  <!--  Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- CSS Stylesheet for BLOG goes here -->
+    <link rel="stylesheet" href="assets/css/about.css">
+
+  <!-- Jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <style>
+    #placeholder {
+      padding: 45px;
+      text-align: center;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div id="container">
+    <section class="hero rounded">
+      <div class="hero-inner">
+        <h1 class="ml1">
+          <span class="text-wrapper">
+            <span class="line line1"></span>
+            <span class="letters">About Me</span>
+            <span class="line line2"></span>
+          </span>
+        </h1>
+        <span class="header-text resizedP"></span>
+        <h3 class="ml2">Bio & Contact</h3>
+        <br>
+
+      </div>
+
+    </section>
+
+    <div class="container">
+      <div class="row">
+        <div class="title">
+          <span>
+            <br>
+            <h1 class="header-text">
+              Lorem Ipsum
+            </h1>
+            <br>
+            <br>
+          </span>
+          <span>
+            <p class="p-text">
+              Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
+              Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+              Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a
+              Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the
+              undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum"
+              (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of
+              ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit
+              amet..", comes from a line in section 1.10.32.
+
+              The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections
+              1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact
+              original form, accompanied by English versions from the 1914 translation by H. Rackham.
+            </p>
+          </span>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <!-- <div class="title"> -->
+        <div class="title">
+          <span>
+            <br>
+            <!-- <h1 class="header-text">
+              
+            </h1> -->
+            <br>
+            <br>
+            <br>
+          </span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- <a href="results.html" button type="button" class="btn btn-primary btn-lg btn-block">Show All</button>
+                 <a href="map.html" button type="button" class="btn btn-secondary btn-lg btn-block">Show Locations</button> -->
+
+  </div>
+  </div>
+</body>
+<script>
+//   // Wrap every letter in a span 
+
+$(".ml1 .letters").each(function () {
+  $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+
+});
+
+anime.timeline({ loop: true })
+  .add({
+    targets: ".ml1 .letter",
+    scale: [0.3, 1],
+    opacity: [0, 1],
+    translateZ: 0,
+    easing: "easeOutExpo",
+    duration: 100,
+    delay: function (el, i) {
+      return 70 * (i + 1);
+    }
+  }).add({
+    targets: ".ml1 .line",
+    scaleX: [0, 1],
+    opacity: [0.5, 1],
+    easing: "easeOutExpo",
+    duration: 700,
+    offset: "-=875",
+    delay: function (el, i, l) {
+      return 80 * (l - i);
+    }
+  }).add({
+    targets: ".ml1",
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 7000
+  });
+
+// "Everything is better with a friend" Javascript animation 
+
+$(".ml2").each(function () {
+  $(this).html($(this).text().replace(/([^.\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+});
+
+anime.timeline({ loop: true })
+  .add({
+    targets: ".ml2 .letter",
+    scale: [3, 1],
+    opacity: [0, 1],
+    translateZ: 0,
+    easing: "easeOutExpo",
+    duration: 700,
+    delay: function (el, i) {
+      return 70 * i;
+    }
+  }).add({
+    targets: ".ml2",
+    opacity: 0,
+    duration: 700,
+    easing: "easeOutExpo",
+    delay: 70000
+  });
+
+
+</script>
+
+
+</html>

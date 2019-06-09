@@ -1,0 +1,66 @@
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Richard Mai</title>
+  <link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
+  <link rel='stylesheet' type='text/css' href='./assets/css/style.css'>
+</head>
+<body>
+
+  <div class="panels">
+    
+    <div class="panel panel1">
+      <p>Create, Read</p>
+      <p>Blog</p>
+      <a href="./blog.html">Go</a>
+      <p>Update, Delete</p>
+    </div>
+    <div class="panel panel2">
+      <p>Give</p>
+      <p>Inspiration</p>
+      <a href="./inspiration.html">Go</a>
+      <p>Receive</p>
+    </div>
+    <div class="panel panel3">
+      <p>Richard Mai</p>
+      <p>About</p>
+      <a href="./about.html">Go</a>
+      <p>Contact Me</p>
+    </div>
+    <div class="panel panel4">
+      <p>UPENN19LPS</p>
+      <p>Portfolio</p>
+      <a href="./portfolio.html">Go</a>
+      <p>Works</p>
+    </div>
+    <div class="panel panel5">
+      <p>Learn</p>
+      <p>Resources</p>
+      <a href="./resources.html">Go</a>
+      <p>Share</p>
+    </div>
+  </div>
+
+
+
+
+  <script>
+    const panels = document.querySelectorAll('.panel');
+    function toggleOpen() {
+      console.log('Hello');
+      this.classList.toggle('open');
+    }
+    function toggleActive(e) {
+      console.log(e.propertyName);
+      if (e.propertyName.includes('flex')) {
+        this.classList.toggle('open-active');
+      }
+    }
+    panels.forEach(panel => panel.addEventListener('click', toggleOpen));
+    panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
+  </script>
+
+</body>
+</html>
